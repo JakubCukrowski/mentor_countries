@@ -347,16 +347,14 @@ body {
   font-family: Nunito Sans, sans-serif;
 }
 
-body .main {
-  background-color: #fafafa;
-  max-width: 100%;
-  min-height: 100vh;
+body #main {
+  background-color: #f5f5f5;
 }
 
-body .main header {
+body #main header {
+  background-color: #fff;
   padding: 30px 0;
   box-shadow: 0 -1px 2px #42445a;
-  background-color: #fff !important;
 }
 
 .container {
@@ -390,6 +388,73 @@ body .main header {
   font-weight: 300;
   display: block;
   transform: rotate(-20deg);
+}
+
+.search-bar-wrapper {
+  position: relative;
+}
+
+.search-bar-wrapper .search-bar {
+  color: #858585;
+  border: none;
+  border-radius: .5em;
+  width: 100%;
+  margin: 2em 0 0;
+  padding: 1.2em 1.2em 1.2em 4em;
+}
+
+.search-bar-wrapper:before {
+  content: "";
+  color: #858585;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+}
+
+.dropdown {
+  width: 65%;
+}
+
+.dropdown .dropdown-menu {
+  background-color: #fff;
+  border-radius: .5em;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1.5em 0;
+  padding: 1.2em 1.5em;
+  display: flex;
+}
+
+.dropdown .dropdown-menu:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.dropdown ul {
+  background-color: #fff;
+  padding: 1.2em;
+  display: none;
+}
+
+.dropdown ul li:not(:last-child) {
+  margin-bottom: .6em;
+}
+
+.blocked {
+  display: block !important;
+}
+
+.countries-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 /*# sourceMappingURL=index.3f997115.css.map */

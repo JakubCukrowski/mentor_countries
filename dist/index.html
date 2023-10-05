@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <section class="main">
+    <section id="main">
         <header>
             <div class="container">
                 <div class="top__section">
@@ -17,8 +17,34 @@
                 </div>
             </div>
         </header>
+
+        <div class="container">
+            <div class="utilities">
+                <span class="search-bar-wrapper">
+                    <input type="text" class="search-bar" placeholder="Search for a country...">
+                </span>
+
+                <div class="dropdown">
+                    <button class="dropdown-menu">Filter by Region</button>
+                    <ul class="dropdown-list">
+                        <li value="africa">Africa</li>
+                        <li value="america">America</li>
+                        <li value="asia">Asia</li>
+                        <li value="europe">Europe</li>
+                        <li value="oceania">Oceania</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
     </section>
     
+    <section id="content-section">
+        <div class="countries-container">
+
+        </div>
+    </section>
+
     <script src="/index.de158e3a.js"></script>
 <script src="/rest-countries-api-with-color-theme-switcher-master.3464ddca.js"></script></body>
 </html>
