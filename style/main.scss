@@ -58,7 +58,7 @@ body {
         width: 100%;
         padding: 1.2em;
         padding-left: 4em;
-        margin: 2em 0 0 0;
+        margin-top: 2em;
         border: none;
         color: $dark-gray;
         border-radius: 0.5em;
@@ -80,11 +80,12 @@ body {
 .dropdown {
 
     width: 65%;
+    position: relative;
 
     .dropdown-menu {
         background-color: $white;
         padding: 1.2em 1.5em;
-        margin: 1.5em 0;
+        margin-top: 1.5em;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -105,6 +106,10 @@ body {
         background-color: $white;
         padding: 1.2em;
         display: none;
+        position: absolute;
+        width: 100%;
+        margin-top: 0.3em;
+        border-radius: 0.5em;
 
         li:not(:last-child) {
             margin-bottom: 0.6em;
@@ -121,4 +126,35 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $very-light-gray;
+    padding-top: 1.5em;
+
+    .country-wrapper {
+        margin-bottom: 2em;
+        border-radius: 0.5em;
+        overflow: hidden;
+
+        .content {
+            padding: 0 1.5em;
+            background-color: $white;
+
+            h2 {
+                font-weight: 800;
+                padding: 1em 0;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1.6em;
+
+                &:last-child {
+                    padding-bottom: 1em;
+                }
+            }
+
+            .content-text-bold {
+                font-weight: 600;
+            }
+        }
+    }
 }
