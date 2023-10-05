@@ -12,9 +12,11 @@ const addCountryStructure = (src, alt, name, population, region, capital)=>{
         <img src=${src} alt=${alt}>
         <div class="content">
             <h2>${name}</h2>
-            <p class="population">Population: ${population}</p>
-            <p class="region">Region: ${region}</p>
-            <p class="capital">Capital: ${capital}</p>
+            <p class="population"><span class="content-text-bold">Population:</span> ${population.toLocaleString("en-us", {
+        style: "decimal"
+    })}</p>
+            <p class="region"><span class="content-text-bold">Region:</span> ${region}</p>
+            <p class="capital"><span class="content-text-bold">Capital:</span> ${capital}</p>
         </div>
 
     `;
@@ -24,6 +26,7 @@ const url = "https://restcountries.com/v3.1/all";
 fetch(url).then((response)=>response.json()).then((response)=>response.forEach((country)=>{
         addCountryStructure(country.flags.png, country.flag, country.name.common, country.population, country.region, country.capital);
     })).catch((err)=>console.log(err));
+//handle dropdown menu
 selectContinent.addEventListener("click", ()=>{
     dropdownList.classList.toggle("blocked");
 });
