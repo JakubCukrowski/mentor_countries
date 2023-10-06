@@ -4,6 +4,8 @@ const dropdownList = document.querySelector(".dropdown-list");
 const selectOptions = dropdownList.querySelectorAll("li");
 //countries
 const countriesContainer = document.querySelector(".countries-container");
+let region;
+//country div
 const addCountryStructure = (src, alt, name, population, region, capital)=>{
     const newDiv = document.createElement("div");
     newDiv.classList.add("country-wrapper");
@@ -21,18 +23,27 @@ const addCountryStructure = (src, alt, name, population, region, capital)=>{
 
     `;
 };
-const url = "https://restcountries.com/v3.1/all";
+let url = "https://restcountries.com/v3.1/all";
 //handle countries
-fetch(url).then((response)=>response.json()).then((response)=>response.forEach((country)=>{
-        addCountryStructure(country.flags.png, country.flag, country.name.common, country.population, country.region, country.capital);
-    })).catch((err)=>console.log(err));
+const fetchCountries = async ()=>{
+    await fetch(url).then((response)=>response.json()).then((respone)=>{
+        respone.forEach((country)=>{
+            addCountryStructure(country.flags.png, country.flag, country.name.common, country.population, country.region, country.capital);
+        });
+    }).catch((err)=>console.log(err));
+};
 //handle dropdown menu
 selectContinent.addEventListener("click", ()=>{
     dropdownList.classList.toggle("blocked");
 });
 selectOptions.forEach((option)=>option.addEventListener("click", (event)=>{
         selectContinent.innerText = event.target.innerText;
+        region = event.target.getAttribute("value");
         dropdownList.classList.remove("blocked");
+        countriesContainer.innerHTML = "";
+        url = `https://restcountries.com/v3.1/region/${region.toLowerCase()}`;
+        fetchCountries();
     }));
+fetchCountries();
 
 //# sourceMappingURL=index.de158e3a.js.map
