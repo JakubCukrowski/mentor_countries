@@ -4,7 +4,11 @@ const dropdownList = document.querySelector(".dropdown-list");
 const selectOptions = dropdownList.querySelectorAll("li");
 //countries
 const countriesContainer = document.querySelector(".countries-container");
+//searchbar
+const searchbar = document.querySelector(".search-bar");
+//url api changers for filtering
 let region;
+let endpoint;
 //country div
 const addCountryStructure = (src, alt, name, population, region, capital)=>{
     const newDiv = document.createElement("div");
@@ -44,6 +48,20 @@ selectOptions.forEach((option)=>option.addEventListener("click", (event)=>{
         url = `https://restcountries.com/v3.1/region/${region.toLowerCase()}`;
         fetchCountries();
     }));
+//handle searchbar
+searchbar.addEventListener("input", ()=>{
+    endpoint = searchbar.value;
+    if (endpoint.length > 0) url = `https://restcountries.com/v3.1/name/${endpoint}`;
+    countriesContainer.innerHTML = "";
+    fetchCountries();
+    if (searchbar.value.length <= 0 && region !== undefined) {
+        url = `https://restcountries.com/v3.1/region/${region.toLowerCase()}`;
+        fetchCountries();
+    } else if (searchbar.value.length <= 0 && region === undefined) {
+        url = "https://restcountries.com/v3.1/all";
+        fetchCountries();
+    }
+});
 fetchCountries();
 
 //# sourceMappingURL=index.de158e3a.js.map
