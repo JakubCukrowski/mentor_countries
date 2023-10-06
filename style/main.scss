@@ -52,15 +52,19 @@ body {
 }
 
 .search-bar-wrapper {
+    width: 100%;
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     position: relative;
 
     .search-bar {
         width: 100%;
-        padding: 1.2em;
+        padding: 1em;
         padding-left: 4em;
-        margin-top: 2em;
+        font-size: 14px;
         border: none;
-        color: $dark-gray;
         border-radius: 0.5em;
     }
 
@@ -68,11 +72,8 @@ body {
         content: '\f002';
         font-family: "Font Awesome 5 Free";
         font-weight: 600;
-        // margin-left: 2.5em;
         position: absolute;
-        top: 50%;
-        left: 5%;
-        transform: translateY(-50%);
+        margin-left: 20px;
         color: $dark-gray;
     }
 }
