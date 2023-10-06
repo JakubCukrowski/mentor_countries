@@ -2,6 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap');
 @import '../style/colors';
 
+@mixin tablet {
+    @media (min-width: 740px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+
 body {
     font-family: 'Nunito Sans', sans-serif;
 
@@ -51,47 +63,58 @@ body {
     }
 }
 
-.search-bar-wrapper {
-    width: 100%;
-    margin-top: 1.5em;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-
-    .search-bar {
-        width: 100%;
-        padding: 1em;
-        padding-left: 4em;
-        font-size: 14px;
-        border: none;
-        border-radius: 0.5em;
+.utilities {
+    @include tablet() {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
     }
 
-    &::before {
-        content: '\f002';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 600;
-        position: absolute;
-        margin-left: 20px;
-        color: $dark-gray;
+    .search-bar-wrapper {
+        width: 100%;
+        margin-top: 1.5em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        flex-basis:  400px;
+    
+        .search-bar {
+            width: 100%;
+            padding: 1em;
+            padding-left: 4em;
+            font-size: 14px;
+            border: none;
+            border-radius: 0.5em;
+        }
+    
+        &::before {
+            content: '\f002';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 600;
+            position: absolute;
+            margin-left: 20px;
+            color: $dark-gray;
+        }
     }
 }
 
 .dropdown {
-
+    margin-top: 1.5em;
     width: 65%;
     position: relative;
+    flex-basis: 200px;
 
     .dropdown-menu {
         background-color: $white;
         padding: 1.2em 1.5em;
-        margin-top: 1.5em;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-radius: 0.5em;
+        font-size: 14px;
 
         &::after {
             content: '\f078';
@@ -115,11 +138,20 @@ body {
         li:not(:last-child) {
             margin-bottom: 0.6em;
         }
+
+        li {
+            cursor: pointer;
+        }
     }
 }
 
 .blocked {
     display: block !important;
+}
+
+#content-section {
+    background-color: $very-light-gray;
+    min-height: calc(100vh - 153px);
 }
 
 .countries-container {
@@ -130,10 +162,28 @@ body {
     background-color: $very-light-gray;
     padding-top: 1.5em;
 
+    @include tablet() {
+        padding-top: 2.5em;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    
+    @include desktop() {
+        justify-content: flex-start;
+        gap: calc((1440px - (4 * 320px)) / 4)
+    }
+
     .country-wrapper {
         margin-bottom: 2em;
         border-radius: 0.5em;
         overflow: hidden;
+        max-width: 320px;
+
+        img {
+            width: 320px;
+            height: 200px;
+        }
 
         .content {
             padding: 0 1.5em;
