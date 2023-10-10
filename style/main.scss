@@ -149,9 +149,18 @@ body {
     display: block !important;
 }
 
+strong {
+    font-weight: bold;
+}
+
 #content-section {
     background-color: $very-light-gray;
     min-height: calc(100vh - 153px);
+}
+
+a {
+    text-decoration: none;
+    color: $dark-blue;
 }
 
 .countries-container {

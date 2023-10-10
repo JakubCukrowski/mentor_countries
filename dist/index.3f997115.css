@@ -472,9 +472,18 @@ body #main header {
   display: block !important;
 }
 
+strong {
+  font-weight: bold;
+}
+
 #content-section {
   background-color: #f5f5f5;
   min-height: calc(100vh - 153px);
+}
+
+a {
+  color: #2b3945;
+  text-decoration: none;
 }
 
 .countries-container {
