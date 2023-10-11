@@ -273,6 +273,7 @@ a {
     .country-info-wrapper {
         @include tablet() {
             display: flex;
+            justify-content: space-between;
         }
     }
 }

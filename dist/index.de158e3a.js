@@ -38,6 +38,8 @@ const addCountryStructure = (src, alt, name, population, region, capital)=>{
     `;
 };
 let url = "https://restcountries.com/v3.1/all";
+const currentURL = window.location.pathname.split("/");
+const currentCountry = currentURL[currentURL.length - 1];
 //handle countries
 const fetchCountries = async ()=>{
     await fetch(url).then((response)=>response.json()).then((response)=>{
@@ -83,6 +85,7 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
         region === undefined ? url = "https://restcountries.com/v3.1/all" : url = `https://restcountries.com/v3.1/region/${region.toLowerCase()}`;
         countriesContainer.innerHTML = "";
         utilities.style.visibility = "visible";
+        history.back();
         fetchCountries();
     });
     countriesContainer.append(newDiv);
@@ -136,10 +139,18 @@ const countryDetail = async (e)=>{
     utilities.style.visibility = "hidden";
     countryName = e.target.closest("a").id;
     url = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
+    history.pushState(null, null, `/country/${countryName}`);
     await fetch(url).then((response)=>response.json()).then((response)=>{
         singleCountryStructure(response[0].flags.png, response[0].flag, response[0].name.common, Object.values(response[0].name.nativeName).length > 2 ? Object.values(response[0].name.nativeName)[2].common : Object.values(response[0].name.nativeName)[0].common, response[0].population, response[0].region, response[0].subregion, response[0].capital, response[0].tld[0], Object.values(response[0].currencies)[0].name, Object.values(response[0].languages).join(", "));
     });
 };
-fetchCountries();
+//on page load display all, after refresh depends on the URL
+if (window.location.pathname === "/") fetchCountries();
+else {
+    url = `https://restcountries.com/v3.1/name/${currentCountry}?fullText=true`;
+    fetch(url).then((response)=>response.json()).then((response)=>{
+        singleCountryStructure(response[0].flags.png, response[0].flag, response[0].name.common, Object.values(response[0].name.nativeName).length > 2 ? Object.values(response[0].name.nativeName)[2].common : Object.values(response[0].name.nativeName)[0].common, response[0].population, response[0].region, response[0].subregion, response[0].capital, response[0].tld[0], Object.values(response[0].currencies)[0].name, Object.values(response[0].languages).join(", "));
+    });
+}
 
 //# sourceMappingURL=index.de158e3a.js.map
