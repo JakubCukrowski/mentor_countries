@@ -597,6 +597,7 @@ a {
 
 @media (width >= 740px) {
   .single-country-wrapper .country-info-wrapper {
+    justify-content: space-between;
     display: flex;
   }
 }
