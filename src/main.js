@@ -187,7 +187,6 @@ const singleCountryStructure = (
 
 const countryDetail = async (e) => {
     e.preventDefault();
-    console.log('wykonano');
     countriesContainer.innerHTML = '';
     utilitiesContainer.remove();
     countryName = e.target.closest('a').id;
