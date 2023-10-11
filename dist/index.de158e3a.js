@@ -15,7 +15,6 @@ let countryName;
 //country div
 const addCountryStructure = (src, alt, name, population, region, capital)=>{
     const newLink = document.createElement("a");
-    // newLink.setAttribute('href', `${name}`);
     newLink.href = `/country/${name}`;
     newLink.setAttribute("id", `${name}`);
     newLink.addEventListener("click", countryDetail);
@@ -74,12 +73,20 @@ searchbar.addEventListener("input", ()=>{
     }
 });
 //single country structure 
-const singleCountryStructure = (src, alt, singleCountryName, nativeName, population, region, subregion, capital)=>{
+const singleCountryStructure = (src, alt, singleCountryName, nativeName, population, countryRegion, subregion, capital, topLevelDomain, currencies, languages)=>{
     const newDiv = document.createElement("div");
     newDiv.classList.add("single-country-wrapper");
+    const newButton = document.createElement("button");
+    newButton.classList.add("back-btn");
+    newButton.innerText = "Back";
+    newButton.addEventListener("click", ()=>{
+        region === undefined ? url = "https://restcountries.com/v3.1/all" : url = `https://restcountries.com/v3.1/region/${region.toLowerCase()}`;
+        countriesContainer.innerHTML = "";
+        utilities.style.visibility = "visible";
+        fetchCountries();
+    });
     countriesContainer.append(newDiv);
     newDiv.innerHTML = `
-        <button class='back-btn'>Back</button>
         <div class='country-info-wrapper'>
             <img src=${src} alt=${alt} >
             <div class='content-wrapper'>
@@ -92,7 +99,7 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
                     </p>
                     <p>
                         <strong>Region: </strong>
-                        ${region}
+                        ${countryRegion}
                     </p>
                     <p>
                         <strong>Sub Region: </strong>
@@ -108,21 +115,29 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
                         <strong>Top Level Domain: </strong>
                         ${topLevelDomain}
                     </p>
+                    <p>
+                        <strong>Currencies: </strong>
+                        ${currencies}
+                    </p>
+                    <p>
+                        <strong>Languages: </strong>
+                        ${languages}
+                    </p>
                 </div>
             </div>
         </div>
     `;
+    newDiv.prepend(newButton);
 };
 // country details page
 const countryDetail = async (e)=>{
     e.preventDefault();
     countriesContainer.innerHTML = "";
-    utilities.style.display = "none";
+    utilities.style.visibility = "hidden";
     countryName = e.target.closest("a").id;
     url = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
     await fetch(url).then((response)=>response.json()).then((response)=>{
-        console.log(response[0].name);
-        singleCountryStructure(response[0].flags.png, response[0].flag, response[0].name.common, Object.values(response[0].name.nativeName).length > 2 ? Object.values(response[0].name.nativeName)[2].common : Object.values(response[0].name.nativeName)[0].common, response[0].population, response[0].region, response[0].subregion, response[0].capital);
+        singleCountryStructure(response[0].flags.png, response[0].flag, response[0].name.common, Object.values(response[0].name.nativeName).length > 2 ? Object.values(response[0].name.nativeName)[2].common : Object.values(response[0].name.nativeName)[0].common, response[0].population, response[0].region, response[0].subregion, response[0].capital, response[0].tld[0], Object.values(response[0].currencies)[0].name, Object.values(response[0].languages).join(", "));
     });
 };
 fetchCountries();
