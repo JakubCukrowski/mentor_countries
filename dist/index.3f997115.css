@@ -570,6 +570,13 @@ a {
   height: 220px;
 }
 
+@media (width >= 740px) {
+  .single-country-wrapper img {
+    width: 600px;
+    height: 400px;
+  }
+}
+
 .single-country-wrapper .content-wrapper {
   margin-top: 2em;
   line-height: 26px;
@@ -586,6 +593,12 @@ a {
 .single-country-wrapper .content-wrapper .left-side-content h2 {
   margin-bottom: 1em;
   font-weight: 800;
+}
+
+@media (width >= 740px) {
+  .single-country-wrapper .country-info-wrapper {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=index.3f997115.css.map */
