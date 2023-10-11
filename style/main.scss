@@ -17,7 +17,7 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
 
-    #main {
+    #top {
         background-color: $very-light-gray;
 
         header {
@@ -28,6 +28,12 @@ body {
             box-shadow: 0px -1px 2px 0px rgba(66, 68, 90, 1);
         }
     }
+}
+
+main {
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: $very-light-gray;
 }
 
 .container {
@@ -215,6 +221,47 @@ a {
             .content-text-bold {
                 font-weight: 600;
             }
+        }
+    }
+}
+
+.single-country-wrapper {
+
+    button {
+        box-shadow: 0 0 4px rgba($dark-gray, 1);
+        padding: 0.5em 1.5em;
+        margin-bottom: 2.5em;
+        font-weight: 600;
+
+        &::before {
+            content: '\f060';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 600;
+            margin-right: 0.8em;
+        }
+    }
+
+    img {
+        width: 320px;
+        height: 220px;
+    }
+
+    .content-wrapper {
+        margin-top: 2em;
+        line-height: 26px;
+
+        p {
+            font-size: 14px;
+        }
+
+        .left-side-content {
+            
+            h2 {
+                font-weight: 800;
+                margin-bottom: 1em;
+            }
+
+            margin-bottom: 1em;
         }
     }
 }
