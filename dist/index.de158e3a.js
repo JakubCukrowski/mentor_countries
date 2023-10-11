@@ -142,7 +142,6 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
 // country details page
 const countryDetail = async (e)=>{
     e.preventDefault();
-    console.log("wykonano");
     countriesContainer.innerHTML = "";
     utilitiesContainer.remove();
     countryName = e.target.closest("a").id;
