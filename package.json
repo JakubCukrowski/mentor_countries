@@ -7,7 +7,7 @@
   "name": "rest-countries-api-with-color-theme-switcher-master",
   "description": "![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "src/main.js",
   "source": "index.html",
   "dependencies": {
     "abortcontroller-polyfill": "^1.7.5",
