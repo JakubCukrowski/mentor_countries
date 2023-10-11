@@ -244,6 +244,11 @@ a {
     img {
         width: 320px;
         height: 220px;
+
+        @include tablet() {
+            width: 600px;
+            height: 400px;
+        }
     }
 
     .content-wrapper {
@@ -262,6 +267,12 @@ a {
             }
 
             margin-bottom: 1em;
+        }
+    }
+
+    .country-info-wrapper {
+        @include tablet() {
+            display: flex;
         }
     }
 }
