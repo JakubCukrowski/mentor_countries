@@ -22,6 +22,10 @@ let region;
 let endpoint;
 let countryName;
 
+let url = 'https://restcountries.com/v3.1/all';
+const currentURL = window.location.pathname.split('/');
+const currentCountry = currentURL[currentURL.length - 1]
+
 //country div
 const addCountryStructure = (src, alt, name, population, region, capital) => {
     const newLink = document.createElement('a');
@@ -45,10 +49,6 @@ const addCountryStructure = (src, alt, name, population, region, capital) => {
 
     `
 }
-
-let url = 'https://restcountries.com/v3.1/all';
-const currentURL = window.location.pathname.split('/');
-const currentCountry = currentURL[currentURL.length - 1]
 
 //handle countries
 
@@ -134,7 +134,7 @@ const singleCountryStructure = (
         ? url = 'https://restcountries.com/v3.1/all' 
         : url = `https://restcountries.com/v3.1/region/${region.toLowerCase()}`;
         countriesContainer.innerHTML = '';
-        createUtilitiesContainer();
+        utilitiesContainer.classList.remove('no-display')
         history.back();
         fetchCountries();
     })
@@ -188,7 +188,7 @@ const singleCountryStructure = (
 const countryDetail = async (e) => {
     e.preventDefault();
     countriesContainer.innerHTML = '';
-    utilitiesContainer.remove();
+    utilitiesContainer.classList.add('no-display')
     countryName = e.target.closest('a').id;
     url = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`
     history.pushState(null, null, `/country/${countryName}`)
@@ -211,64 +211,6 @@ const countryDetail = async (e) => {
                 Object.values(response[0].languages).join(', ')
             )
         })
-}
-
-//create utilities container if deleted
-
-const createUtilitiesContainer = () => {
-    const newUtilitiesContainer = document.createElement('div');
-    newUtilitiesContainer.classList.add('container', 'utilities__container');
-    topSection.append(newUtilitiesContainer);
-
-    const utilitiesDiv = document.createElement('div');
-    utilitiesDiv.classList.add('utilities');
-    newUtilitiesContainer.append(utilitiesDiv);
-
-    const searchbarWrapper = document.createElement('span');
-    searchbarWrapper.classList.add('search-bar-wrapper');
-    utilitiesDiv.append(searchbarWrapper);
-
-    const searchbarInput = document.createElement('input');
-    searchbarInput.setAttribute('type', 'text');
-    searchbarInput.setAttribute('placeholder', 'Search for a country...');
-    searchbarInput.classList.add('search-bar');
-    searchbarInput.addEventListener('input', handleSearchbar);
-    searchbarWrapper.append(searchbarInput);
-
-    const dropdownDiv = document.createElement('div');
-    dropdownDiv.classList.add('dropdown');
-    newUtilitiesContainer.append(dropdownDiv);
-
-    const newDropdownButton = document.createElement('button');
-    newDropdownButton.classList.add('dropdown-menu');
-    newDropdownButton.innerText = 'Filter by Region';
-    newDropdownButton.addEventListener('click', handleSelectContinent)
-    dropdownDiv.append(newDropdownButton);
-
-    const newDropdownList = document.createElement('ul');
-    newDropdownList.classList.add('dropdown-list');
-    dropdownDiv.append(dropdownList);
-
-    const newLiOption1 = document.createElement('li'); 
-    const newLiOption2 = document.createElement('li'); 
-    const newLiOption3 = document.createElement('li'); 
-    const newLiOption4 = document.createElement('li'); 
-    const newLiOption5 = document.createElement('li'); 
-
-    newLiOption1.setAttribute('value', 'Africa');
-    newLiOption2.setAttribute('value', 'Americas');
-    newLiOption3.setAttribute('value', 'Asia');
-    newLiOption4.setAttribute('value', 'Europe');
-    newLiOption5.setAttribute('value', 'Oceania');
-
-    newLiOption1.addEventListener('click', handleOptions)
-    newLiOption2.addEventListener('click', handleOptions)
-    newLiOption3.addEventListener('click', handleOptions)
-    newLiOption4.addEventListener('click', handleOptions)
-    newLiOption5.addEventListener('click', handleOptions)
-
-    newDropdownList.append(newLiOption1, newLiOption2, newLiOption3, newLiOption4, newLiOption5)
-
 }
 
 //on page load display all, after refresh depends on the URL
