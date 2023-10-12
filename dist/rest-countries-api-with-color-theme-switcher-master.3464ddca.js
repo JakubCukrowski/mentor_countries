@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"f3Xap":[function(require,module,exports) {
+})({"52Bh2":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -575,6 +575,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"j4kuM":[function(require,module,exports) {
 
-},{}]},["f3Xap","j4kuM"], "j4kuM", "parcelRequire1861")
+},{}]},["52Bh2","j4kuM"], "j4kuM", "parcelRequire1861")
 
 //# sourceMappingURL=rest-countries-api-with-color-theme-switcher-master.3464ddca.js.map
