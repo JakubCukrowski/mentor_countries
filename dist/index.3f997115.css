@@ -551,14 +551,20 @@ a {
   font-weight: 600;
 }
 
-.single-country-wrapper button {
+@media (width >= 740px) {
+  .single-country-wrapper {
+    width: 100%;
+  }
+}
+
+.single-country-wrapper .back-btn {
   margin-bottom: 2.5em;
   padding: .5em 1.5em;
   font-weight: 600;
   box-shadow: 0 0 4px #858585;
 }
 
-.single-country-wrapper button:before {
+.single-country-wrapper .back-btn:before {
   content: "";
   margin-right: .8em;
   font-family: "Font Awesome 5 Free";
@@ -572,32 +578,45 @@ a {
 
 @media (width >= 740px) {
   .single-country-wrapper img {
-    width: 600px;
+    width: 400px;
+    height: 260px;
+  }
+}
+
+@media (width >= 1440px) {
+  .single-country-wrapper img {
+    width: 700px;
     height: 400px;
   }
 }
 
-.single-country-wrapper .content-wrapper {
+.single-country-wrapper .country-info-wrapper {
   margin-top: 2em;
   line-height: 26px;
 }
 
-.single-country-wrapper .content-wrapper p {
+.single-country-wrapper .country-info-wrapper p {
   font-size: 14px;
 }
 
-.single-country-wrapper .content-wrapper .left-side-content {
-  margin-bottom: 1em;
-}
-
-.single-country-wrapper .content-wrapper .left-side-content h2 {
+.single-country-wrapper .country-info-wrapper h2 {
   margin-bottom: 1em;
   font-weight: 800;
 }
 
+.single-country-wrapper .country-info-wrapper .left-side-content {
+  margin-bottom: 1em;
+}
+
 @media (width >= 740px) {
-  .single-country-wrapper .country-info-wrapper {
+  .single-country-wrapper .country-info-wrapper .content-wrapper {
+    gap: 5em;
+    display: flex;
+  }
+
+  .single-country-wrapper .country-data-wrapper {
     justify-content: space-between;
+    align-items: center;
     display: flex;
   }
 }
