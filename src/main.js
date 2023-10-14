@@ -34,6 +34,8 @@ const currentCountryName = decodeURIComponent(currentURL[currentURL.length - 1])
 
 let currentCountry;
 
+let countriesByRegion;
+
 //handle response, store it in 'countries' variable
 
 const fetchCountries = async () => {
@@ -129,8 +131,17 @@ const handleOptions = (event) => {
     region = event.target.getAttribute('value');
     dropdownList.classList.remove('blocked');
     countriesContainer.innerHTML = '';
-    url = `https://restcountries.com/v3.1/region/${region.toLowerCase()}`;
-    fetchCountries();
+    countriesByRegion = countries.filter(country => country.region === region)
+    countriesByRegion.forEach(country => {
+        addCountryStructure(
+            country.images.png,
+            country.isoCode,
+            country.commonName,
+            country.population,
+            country.region,
+            country.capital
+        )
+    })
 }
 
 selectOptions.forEach(option => option.addEventListener('click', handleOptions))
@@ -139,18 +150,64 @@ selectOptions.forEach(option => option.addEventListener('click', handleOptions))
 
 const handleSearchbar = (e) => {
     endpoint = e.target.value;
+
     if (endpoint.length > 0) {
-        url = `https://restcountries.com/v3.1/name/${endpoint}`;
-        countriesContainer.innerHTML = '';
-        fetchCountries();
+        if (region !== undefined) {
+            const countryFilteredByRegion = countriesByRegion
+                .filter(country => country.commonName.toLowerCase().includes(endpoint.toLowerCase()))
+            countriesContainer.innerHTML = '';
+            countryFilteredByRegion.forEach(country => {
+                addCountryStructure(
+                    country.images.png,
+                    country.isoCode,
+                    country.commonName,
+                    country.population,
+                    country.region,
+                    country.capital
+                )
+            })
+
+        } else {
+            const filteredCountry = countries.filter(country => country.commonName.toLowerCase().includes(endpoint.toLowerCase()))
+            countriesContainer.innerHTML = '';
+            filteredCountry.forEach(country => {
+                addCountryStructure(
+                    country.images.png,
+                    country.isoCode,
+                    country.commonName,
+                    country.population,
+                    country.region,
+                    country.capital
+                )
+            });
+        }
     }
     
     if (e.target.value.length <= 0 && region !== undefined) {
-        url = `https://restcountries.com/v3.1/region/${region.toLowerCase()}`;
-        fetchCountries();
+        countriesContainer.innerHTML = '';
+        countriesByRegion.forEach(country => {
+            addCountryStructure(
+                country.images.png,
+                country.isoCode,
+                country.commonName,
+                country.population,
+                country.region,
+                country.capital
+            )
+        })
+
     } else if (e.target.value.length <= 0 && region === undefined) {
-        url = 'https://restcountries.com/v3.1/all';
-        fetchCountries();
+        countriesContainer.innerHTML = '';
+        countries.forEach(country => {
+            addCountryStructure(
+                country.images.png,
+                country.isoCode,
+                country.commonName,
+                country.population,
+                country.region,
+                country.capital
+            )
+        })
     }
 }
 
@@ -178,14 +235,34 @@ const singleCountryStructure = (
     newButton.classList.add('back-btn');
     newButton.innerText = 'Back';
     newButton.addEventListener('click', () => {
-        region === undefined 
-        ? url = 'https://restcountries.com/v3.1/all' 
-        : url = `https://restcountries.com/v3.1/region/${region.toLowerCase()}`;
         countriesContainer.innerHTML = '';
         utilitiesContainer.classList.remove('no-display');
         searchbar.value = '';
         history.back();
-        fetchCountries();
+
+        if (region !== undefined) {
+            countriesByRegion.forEach(country => {
+                addCountryStructure(
+                    country.images.png,
+                    country.isoCode,
+                    country.commonName,
+                    country.population,
+                    country.region,
+                    country.capital
+                )
+            })
+        } else {
+            countries.forEach(country => {
+                addCountryStructure(
+                    country.images.png,
+                    country.isoCode,
+                    country.commonName,
+                    country.population,
+                    country.region,
+                    country.capital
+                )
+            })
+        }
     })
     countriesContainer.append(newDiv);
     newDiv.innerHTML = `

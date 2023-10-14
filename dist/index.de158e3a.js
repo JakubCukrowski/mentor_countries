@@ -21,7 +21,36 @@ const currentURL = window.location.pathname.split("/");
 //reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 const currentCountryName = decodeURIComponent(currentURL[currentURL.length - 1]);
 let currentCountry;
-//handle countries
+let countriesByRegion;
+//handle response, store it in 'countries' variable
+const fetchCountries = async ()=>{
+    await fetch(url).then((response)=>response.json()).then((response)=>{
+        countries = response.map((country)=>{
+            return {
+                commonName: country.name.common,
+                nativeName: country.name.nativeName,
+                languages: country.languages,
+                images: country.flags,
+                isoCode: country.flag,
+                population: country.population,
+                region: country.region,
+                subregion: country.subregion,
+                capital: country.capital,
+                topLevelDomain: country.tld,
+                currencies: country.currencies,
+                borders: country.borders || null
+            };
+        });
+        if (window.location.pathname === "/") countries.forEach((country)=>{
+            addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
+        });
+        else {
+            currentCountry = countries.find((country)=>country.commonName === currentCountryName);
+            utilitiesContainer.classList.add("no-display");
+            singleCountryStructure(currentCountry.images.png, currentCountry.isoCode, currentCountry.commonName, Object.values(currentCountry.nativeName).length > 2 ? Object.values(currentCountry.nativeName)[2].common : Object.values(currentCountry.nativeName)[0].common, currentCountry.population, currentCountry.region, currentCountry.subregion, currentCountry.capital, currentCountry.topLevelDomain, Object.values(currentCountry.currencies)[0].name, Object.values(currentCountry.languages).join(", "), currentCountry.borders);
+        }
+    }).catch((err)=>console.log(err));
+};
 //country div
 const addCountryStructure = (src, alt, name, population, region, capital)=>{
     const newLink = document.createElement("a");
@@ -57,24 +86,40 @@ const handleOptions = (event)=>{
     region = event.target.getAttribute("value");
     dropdownList.classList.remove("blocked");
     countriesContainer.innerHTML = "";
-    url = `https://restcountries.com/v3.1/region/${region.toLowerCase()}`;
-    fetchCountries();
+    countriesByRegion = countries.filter((country)=>country.region === region);
+    countriesByRegion.forEach((country)=>{
+        addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
+    });
 };
 selectOptions.forEach((option)=>option.addEventListener("click", handleOptions));
 //handle searchbar
 const handleSearchbar = (e)=>{
     endpoint = e.target.value;
     if (endpoint.length > 0) {
-        url = `https://restcountries.com/v3.1/name/${endpoint}`;
-        countriesContainer.innerHTML = "";
-        fetchCountries();
+        if (region !== undefined) {
+            const countryFilteredByRegion = countriesByRegion.filter((country)=>country.commonName.toLowerCase().includes(endpoint.toLowerCase()));
+            countriesContainer.innerHTML = "";
+            countryFilteredByRegion.forEach((country)=>{
+                addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
+            });
+        } else {
+            const filteredCountry = countries.filter((country)=>country.commonName.toLowerCase().includes(endpoint.toLowerCase()));
+            countriesContainer.innerHTML = "";
+            filteredCountry.forEach((country)=>{
+                addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
+            });
+        }
     }
     if (e.target.value.length <= 0 && region !== undefined) {
-        url = `https://restcountries.com/v3.1/region/${region.toLowerCase()}`;
-        fetchCountries();
+        countriesContainer.innerHTML = "";
+        countriesByRegion.forEach((country)=>{
+            addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
+        });
     } else if (e.target.value.length <= 0 && region === undefined) {
-        url = "https://restcountries.com/v3.1/all";
-        fetchCountries();
+        countriesContainer.innerHTML = "";
+        countries.forEach((country)=>{
+            addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
+        });
     }
 };
 searchbar.addEventListener("input", handleSearchbar);
@@ -86,12 +131,16 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
     newButton.classList.add("back-btn");
     newButton.innerText = "Back";
     newButton.addEventListener("click", ()=>{
-        region === undefined ? url = "https://restcountries.com/v3.1/all" : url = `https://restcountries.com/v3.1/region/${region.toLowerCase()}`;
         countriesContainer.innerHTML = "";
         utilitiesContainer.classList.remove("no-display");
         searchbar.value = "";
         history.back();
-        fetchCountries();
+        if (region !== undefined) countriesByRegion.forEach((country)=>{
+            addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
+        });
+        else countries.forEach((country)=>{
+            addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
+        });
     });
     countriesContainer.append(newDiv);
     newDiv.innerHTML = `
@@ -143,7 +192,7 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
     if (borderCountries) {
         const borderButtonsContainer = document.createElement("div");
         borderButtonsContainer.classList.add("border-buttons-container");
-        borderButtonsContainer.innerHTML = `<p><strong>Border Countries: </strong></p>`;
+        borderButtonsContainer.innerHTML = `<p><strong>Border Counties: </strong></p>`;
         for(let i = 0; i < borderCountries.length; i++){
             const borderCountryButton = document.createElement("button");
             borderCountryButton.classList.add("border-country-btn");
