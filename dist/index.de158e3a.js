@@ -18,36 +18,10 @@ let endpoint;
 let countryName;
 let url = "https://restcountries.com/v3.1/all";
 const currentURL = window.location.pathname.split("/");
-const currentCountryName = currentURL[currentURL.length - 1];
+//reference https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/decodeURIComponent
+const currentCountryName = decodeURIComponent(currentURL[currentURL.length - 1]);
+let currentCountry;
 //handle countries
-const fetchCountries = async ()=>{
-    await fetch(url).then((response)=>response.json()).then((response)=>{
-        countries = response.map((country)=>{
-            return {
-                commonName: country.name.common,
-                nativeName: country.name.nativeName,
-                languages: country.languages,
-                images: country.flags,
-                isoCode: country.flag,
-                population: country.population,
-                region: country.region,
-                subregion: country.subregion,
-                capital: country.capital,
-                topLevelDomain: country.tld,
-                currencies: country.currencies,
-                borders: country.borders || null
-            };
-        });
-        if (window.location.pathname === "/") countries.forEach((country)=>{
-            addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
-        });
-        else {
-            utilitiesContainer.classList.add("no-display");
-            const currentCountry = countries.find((country)=>country.commonName = currentCountryName);
-            singleCountryStructure(currentCountry.images.png, currentCountry.isoCode, currentCountry.commonName, Object.values(currentCountry.nativeName).length > 2 ? Object.values(currentCountry.nativeName)[2].common : Object.values(currentCountry.nativeName)[0].common, currentCountry.population, currentCountry.region, currentCountry.subregion, currentCountry.capital, currentCountry.topLevelDomain, Object.values(currentCountry.currencies)[0].name, Object.values(currentCountry.languages).join(", "), currentCountry.borders);
-        }
-    }).catch((err)=>console.log(err));
-};
 //country div
 const addCountryStructure = (src, alt, name, population, region, capital)=>{
     const newLink = document.createElement("a");
@@ -166,12 +140,18 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
     newDiv.prepend(newButton);
     const countryInfoWrapper = newDiv.querySelector(".country-info-wrapper");
     //check if country has aany neighbours, if yes, add buttons
-    if (borderCountries) for(let i = 0; i < borderCountries.length; i++){
-        const borderCountryButton = document.createElement("button");
-        borderCountryButton.classList.add("border-country-btn");
-        borderCountryButton.id = borderCountries[i];
-        borderCountryButton.innerText = borderCountries[i];
-        countryInfoWrapper.append(borderCountryButton);
+    if (borderCountries) {
+        const borderButtonsContainer = document.createElement("div");
+        borderButtonsContainer.classList.add("border-buttons-container");
+        borderButtonsContainer.innerHTML = `<p><strong>Border Countries: </strong></p>`;
+        for(let i = 0; i < borderCountries.length; i++){
+            const borderCountryButton = document.createElement("button");
+            borderCountryButton.classList.add("border-country-btn");
+            borderCountryButton.id = borderCountries[i];
+            borderCountryButton.innerText = borderCountries[i];
+            borderButtonsContainer.append(borderCountryButton);
+        }
+        countryInfoWrapper.append(borderButtonsContainer);
     }
 };
 // country details page
@@ -180,11 +160,9 @@ const countryDetail = async (e)=>{
     countriesContainer.innerHTML = "";
     utilitiesContainer.classList.add("no-display");
     countryName = e.target.closest("a").id;
-    url = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
+    currentCountry = countries.find((country)=>country.commonName === countryName);
     history.pushState(null, null, `/country/${countryName}`);
-    await fetch(url).then((response)=>response.json()).then((response)=>{
-        singleCountryStructure(response[0].flags.png, response[0].flag, response[0].name.common, Object.values(response[0].name.nativeName).length > 2 ? Object.values(response[0].name.nativeName)[2].common : Object.values(response[0].name.nativeName)[0].common, response[0].population, response[0].region, response[0].subregion, response[0].capital, response[0].tld[0], Object.values(response[0].currencies)[0].name, Object.values(response[0].languages).join(", "));
-    });
+    singleCountryStructure(currentCountry.images.png, currentCountry.isoCode, currentCountry.commonName, Object.values(currentCountry.nativeName).length > 2 ? Object.values(currentCountry.nativeName)[2].common : Object.values(currentCountry.nativeName)[0].common, currentCountry.population, currentCountry.region, currentCountry.subregion, currentCountry.capital, currentCountry.topLevelDomain, Object.values(currentCountry.currencies)[0].name, Object.values(currentCountry.languages).join(", "), currentCountry.borders);
 };
 fetchCountries();
 
