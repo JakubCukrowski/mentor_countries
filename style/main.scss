@@ -1,18 +1,7 @@
 @use '../node_modules/scss-reset/reset';
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap');
 @import '../style/colors';
-
-@mixin tablet {
-    @media (min-width: 740px) {
-        @content;
-    }
-}
-
-@mixin desktop {
-    @media (min-width: 1440px) {
-        @content;
-    }
-}
+@import '../style/mixins';
 
 body {
     font-family: 'Nunito Sans', sans-serif;
@@ -226,8 +215,11 @@ a {
 }
 
 .single-country-wrapper {
+    @include tablet() {
+        width: 100%;
+    }
 
-    button {
+    .back-btn {
         box-shadow: 0 0 4px rgba($dark-gray, 1);
         padding: 0.5em 1.5em;
         margin-bottom: 2.5em;
@@ -246,12 +238,17 @@ a {
         height: 220px;
 
         @include tablet() {
-            width: 600px;
+            width: 400px;
+            height: 260px;
+        }
+
+        @include desktop() {
+            width: 700px;
             height: 400px;
         }
     }
 
-    .content-wrapper {
+    .country-info-wrapper {
         margin-top: 2em;
         line-height: 26px;
 
@@ -259,21 +256,29 @@ a {
             font-size: 14px;
         }
 
-        .left-side-content {
-            
-            h2 {
-                font-weight: 800;
-                margin-bottom: 1em;
-            }
-
+        h2 {
+            font-weight: 800;
             margin-bottom: 1em;
+        }
+
+        .left-side-content {
+            margin-bottom: 1em;
+        }
+
+        .content-wrapper {
+
+            @include tablet {
+                display: flex;
+                gap: 5em;
+            }
         }
     }
 
-    .country-info-wrapper {
+    .country-data-wrapper {
         @include tablet() {
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
     }
 }
