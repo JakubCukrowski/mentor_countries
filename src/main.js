@@ -1,6 +1,9 @@
 //section id=top
 const topSection = document.querySelector('#top');
 
+//dark theme button
+const darkThemeBtn = document.querySelector('.dark-mode-btn')
+
 //dropdown menu
 
 const selectContinent = document.querySelector('.dropdown-menu');
@@ -15,7 +18,7 @@ const countriesContainer = document.querySelector('.countries-container');
 const searchbar = document.querySelector('.search-bar');
 
 //utilities container to delete
-const utilitiesContainer = document.querySelector('.utilities__container')
+const utilitiesContainer = document.querySelector('#utilities__container')
 
 // countries variable, storing fetched data
 
@@ -94,6 +97,14 @@ const fetchCountries = async () => {
     })
     .catch(err => console.log(err));
 }
+
+//handle dark theme
+
+const handleDarkThemeBtn = () => {
+    document.body.classList.toggle('dark-theme');
+}
+
+darkThemeBtn.addEventListener('click', handleDarkThemeBtn)
 
 //country div
 const addCountryStructure = (src, alt, name, population, region, capital) => {
