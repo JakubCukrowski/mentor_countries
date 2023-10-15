@@ -155,7 +155,8 @@ const handleSearchbar = (e) => {
     if (endpoint.length > 0) {
         if (region !== undefined) {
             const countryFilteredByRegion = countriesByRegion
-                .filter(country => country.commonName.toLowerCase().includes(endpoint.toLowerCase()))
+                .filter(country => country.commonName
+                    .normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(endpoint.toLowerCase()))
             countriesContainer.innerHTML = '';
             countryFilteredByRegion.forEach(country => {
                 addCountryStructure(
@@ -169,7 +170,9 @@ const handleSearchbar = (e) => {
             })
 
         } else {
-            const filteredCountry = countries.filter(country => country.commonName.toLowerCase().includes(endpoint.toLowerCase()))
+            const filteredCountry = countries
+                .filter(country => country.commonName
+                    .normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(endpoint.toLowerCase()))
             countriesContainer.innerHTML = '';
             filteredCountry.forEach(country => {
                 addCountryStructure(

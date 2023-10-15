@@ -626,7 +626,8 @@ a {
 }
 
 .border-country-btn {
-  padding: .5em 1em;
+  width: 6em;
+  padding: .4em 0;
   box-shadow: 0 0 2px #858585;
 }
 
