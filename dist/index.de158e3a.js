@@ -38,7 +38,8 @@ const fetchCountries = async ()=>{
                 capital: country.capital,
                 topLevelDomain: country.tld,
                 currencies: country.currencies,
-                borders: country.borders || null
+                borders: country.borders || null,
+                cca3: country.cca3
             };
         });
         if (window.location.pathname === "/") countries.forEach((country)=>{
@@ -97,7 +98,11 @@ const handleSearchbar = (e)=>{
     endpoint = e.target.value;
     if (endpoint.length > 0) {
         if (region !== undefined) {
+<<<<<<< HEAD
+            const countryFilteredByRegion = countriesByRegion.filter((country)=>country.commonName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(endpoint.toLowerCase()));
+=======
             const countryFilteredByRegion = countriesByRegion.find((country)=>country.commonName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(endpoint.toLowerCase()));
+>>>>>>> 2835d2c2c5948b0dc52d599e5dad230efa424ece
             countriesContainer.innerHTML = "";
             addCountryStructure(countryFilteredByRegion.images.png, countryFilteredByRegion.isoCode, countryFilteredByRegion.commonName, countryFilteredByRegion.population, countryFilteredByRegion.region, countryFilteredByRegion.capital);
         } else {
@@ -132,7 +137,7 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
         countriesContainer.innerHTML = "";
         utilitiesContainer.classList.remove("no-display");
         searchbar.value = "";
-        history.back();
+        history.pushState(null, null, `/`);
         if (region !== undefined) countriesByRegion.forEach((country)=>{
             addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
         });
@@ -190,16 +195,30 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
     if (borderCountries) {
         const borderButtonsContainer = document.createElement("div");
         borderButtonsContainer.classList.add("border-buttons-container");
+        const borderButtonsWrapper = document.createElement("div");
+        borderButtonsWrapper.classList.add("border-buttons-wrapper");
         borderButtonsContainer.innerHTML = `<p><strong>Border Counties: </strong></p>`;
         for(let i = 0; i < borderCountries.length; i++){
             const borderCountryButton = document.createElement("button");
             borderCountryButton.classList.add("border-country-btn");
+            borderCountryButton.addEventListener("click", handleBorderButtons);
+            const filterBorderCountries = countries.find((country)=>country.cca3 === borderCountries[i]);
             borderCountryButton.id = borderCountries[i];
-            borderCountryButton.innerText = borderCountries[i];
-            borderButtonsContainer.append(borderCountryButton);
+            borderCountryButton.innerText = filterBorderCountries.commonName;
+            borderButtonsWrapper.append(borderCountryButton);
         }
+        borderButtonsContainer.append(borderButtonsWrapper);
         countryInfoWrapper.append(borderButtonsContainer);
     }
+};
+//handle border countries buttons
+const handleBorderButtons = (e)=>{
+    const borderCountry = countries.find((country)=>{
+        return country.cca3 === e.target.id;
+    });
+    countriesContainer.innerHTML = "";
+    singleCountryStructure(borderCountry.images.png, borderCountry.isoCode, borderCountry.commonName, Object.values(borderCountry.nativeName).length > 2 ? Object.values(borderCountry.nativeName)[2].common : Object.values(borderCountry.nativeName)[0].common, borderCountry.population, borderCountry.region, borderCountry.subregion, borderCountry.capital, borderCountry.topLevelDomain, Object.values(borderCountry.currencies)[0].name, Object.values(borderCountry.languages).join(", "), borderCountry.borders);
+    history.pushState(null, null, `/country/${borderCountry.commonName}`);
 };
 // country details page
 const countryDetail = async (e)=>{

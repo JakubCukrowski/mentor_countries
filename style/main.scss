@@ -234,7 +234,7 @@ a {
     }
 
     img {
-        width: 320px;
+        width: auto;
         height: 220px;
 
         @include tablet() {
@@ -279,10 +279,23 @@ a {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 4em;
         }
     }
 }
 
 .no-display {
     display: none;
+}
+
+.border-buttons-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+
+    .border-country-btn {
+        padding: 0.4em 0;
+        width: 6em;
+        box-shadow: 0 0 2px rgba($dark-gray, 1);
+    }
 }

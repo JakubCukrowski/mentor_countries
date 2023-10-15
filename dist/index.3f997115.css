@@ -572,7 +572,7 @@ a {
 }
 
 .single-country-wrapper img {
-  width: 320px;
+  width: auto;
   height: 220px;
 }
 
@@ -617,12 +617,25 @@ a {
   .single-country-wrapper .country-data-wrapper {
     justify-content: space-between;
     align-items: center;
+    gap: 4em;
     display: flex;
   }
 }
 
 .no-display {
   display: none;
+}
+
+.border-buttons-wrapper {
+  flex-wrap: wrap;
+  gap: .5em;
+  display: flex;
+}
+
+.border-buttons-wrapper .border-country-btn {
+  width: 6em;
+  padding: .4em 0;
+  box-shadow: 0 0 2px #858585;
 }
 
 /*# sourceMappingURL=index.3f997115.css.map */
