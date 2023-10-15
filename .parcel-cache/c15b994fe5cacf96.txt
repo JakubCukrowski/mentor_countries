@@ -1,4 +1,4 @@
-6069
+6070
 112C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\json5\lib\stringify.d.ts133417792903037211 0
 138C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\features\spellcheck-attribute.js133417792889553202 0
 130C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\scss-reset\test\images\css-3-logo-test.svg133417792908039431 0
@@ -27,20 +27,6 @@
 117C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\mdn-data\api\inheritance.json133417792905318784 0
 116C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\sass\types\logger\index.d.ts133417792907679378 0
 141C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\css-select\node_modules\domhandler\lib\index.d.ts.map133417792893354030 0
-113C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\svgo\plugins\prefixIds.js133417792909160082 0
-108C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\picocolors\README.md133417792906654142 0
-94C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\braces133417792885512157 1
-116C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\css-select\lib\sort.d.ts.map133417792893194020 0
-119C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\regions\AX.js133417792890393365 0
-151C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\lexer\error.js133417792864781307 0
-<<<<<<< HEAD
-78C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\src133418335150914738 1
-=======
-78C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\src133417792910120377 1
->>>>>>> 2835d2c2c5948b0dc52d599e5dad230efa424ece
-101C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\timsort\build133417792909439872 1
-119C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\weak-lru-cache\rollup.config.js133417792910000370 0
-128C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\type-fest\source\fixed-length-array.d.ts133417792909655263 0
 104C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\scss-reset\.gulp133417792907799461 1
 168C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\ordered-binary\.nyc_output\processinfo\5b6bd808-0399-4ee6-9395-344688761dfa.json133417792906439040 0
 133C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\css-tree\lib\syntax\node\AttributeSelector.js133417792895754738 0
@@ -49,11 +35,7 @@
 124C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\cosmiconfig\dist\ExplorerSync.js.map133417792892648918 0
 112C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\ansi-styles\package.json133417792885272165 0
 93C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\style\_mixins.scss133417741014373131 0
-<<<<<<< HEAD
-79C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist133418402373266917 1
-=======
-79C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist133418327511592198 1
->>>>>>> 2835d2c2c5948b0dc52d599e5dad230efa424ece
+79C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist133418706666707956 1
 96C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\chokidar133417792892353814 1
 122C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@swc\helpers\src\_create_super.mjs133417792884672102 0
 139C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@swc\helpers\cjs\_class_private_field_loose_key.cjs133417792883311655 0
@@ -72,6 +54,12 @@
 168C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\optimizer-svgo\node_modules\css-select\lib\pseudo-selectors\aliases.d.ts133417792864541179 0
 92C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\svgo133417792908959868 1
 85C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\index.html133417792856016404 0
+125C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\lib\replace\AttributeSelector.js133417792896834987 0
+122C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\css-tree\cjs\syntax\config\mix.cjs133417792894594389 0
+96C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\boolbase133417792885472161 1
+141C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\node_modules\css-tree\lib\lexer\generic-const.js133417792898515509 0
+87C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\netlify.toml133418679856011257 0
+117C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\scss-reset\_reset-mixins.scss133417792907839427 0
 105C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\is-glob\README.md133417792902557021 0
 96C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\css-tree133417792896194728 1
 122C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\core\src\InternalConfig.js133417792857977052 0
@@ -87,6 +75,16 @@
 120C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\postcss-value-parser\lib\walk.js133417792906799250 0
 118C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\nth-check\lib\compile.d.ts.map133417792906279046 0
 119C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\regions\GT.js133417792890873566 0
+113C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\svgo\plugins\prefixIds.js133417792909160082 0
+108C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\picocolors\README.md133417792906654142 0
+94C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\braces133417792885512157 1
+116C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\css-select\lib\sort.d.ts.map133417792893194020 0
+119C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\regions\AX.js133417792890393365 0
+151C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\lexer\error.js133417792864781307 0
+78C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\src133418407235599618 1
+101C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\timsort\build133417792909439872 1
+119C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\weak-lru-cache\rollup.config.js133417792910000370 0
+128C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\type-fest\source\fixed-length-array.d.ts133417792909655263 0
 118C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\domutils\lib\querying.d.ts.map133417792900516212 0
 135C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\node_modules\css-tree\cjs\parser\index.cjs133417792897314999 0
 113C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\semver\functions\clean.js133417792908119426 0
@@ -101,11 +99,7 @@
 119C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\chrome-trace-event\package.json133417792892433817 0
 133C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@swc\helpers\cjs\_assert_this_initialized.cjs133417792883191661 0
 144C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\node_modules\css-tree\cjs\tokenizer\TokenStream.cjs133417792897995503 0
-<<<<<<< HEAD
-90C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\style\main.scss133418385035830406 0
-=======
-90C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\style\main.scss133417741014373131 0
->>>>>>> 2835d2c2c5948b0dc52d599e5dad230efa424ece
+90C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\style\main.scss133418685616261410 0
 97C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\dist133417792896755054 1
 93C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\style\_colors.scss133410547349861286 0
 120C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\htmlnano\docs\docs\030-config.md133417792901757065 0
@@ -119,11 +113,7 @@
 162C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\optional.js133417792905653927 0
 119C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@swc\helpers\_\_read_only_error133417792882991660 1
 177C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\node\PseudoElementSelector.js133417792861979985 0
-<<<<<<< HEAD
-86C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\src\main.js133418402373026816 0
-=======
-86C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\src\main.js133418327511312182 0
->>>>>>> 2835d2c2c5948b0dc52d599e5dad230efa424ece
+86C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\src\main.js133418706666507963 0
 165C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\ClassSelector.js133417792864941344 0
 101C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\htmlnano\docs133417792901956995 1
 140C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\lmdb\node_modules\node-addon-api\tools\check-napi.js133417792905118778 0
@@ -210,9 +200,6 @@
 114C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@swc\helpers\cjs\index.cjs133417792883791948 0
 123C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\regions\alt-af.js133417792892153823 0
 94C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\base-x133417792885392180 1
-125C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\lib\replace\AttributeSelector.js133417792896834987 0
-122C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\css-tree\cjs\syntax\config\mix.cjs133417792894594389 0
-96C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\boolbase133417792885472161 1
 102C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\README.md133417792896354740 0
 117C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\ordered-binary\dist\index.cjs133417792906479035 0
 106C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\callsites\index.js133417792885632223 0
@@ -289,11 +276,6 @@
 114C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\semver\functions\coerce.js133417792908119426 0
 99C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\glob-parent133417792901556682 1
 107C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\yallist\iterator.js133417792910080378 0
-118C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\immutable\dist\immutable.es.js133417792902356973 0
-117C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\profiler\lib\types.js133417792866861846 0
-126C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\cjs\restructure\prepare\index.cjs133417792896594806 0
-140C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@swc\helpers\_\_tagged_template_literal\package.json133417792883031656 0
-96C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\htmlnano133417792902196980 1
 116C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\watcher\package.json133417792878643946 0
 107C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\lmdb\src\writer.cpp133417792905239069 0
 161C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\optimizer-htmlnano\node_modules\css-select\lib\procedure.d.ts.map133417792861139650 0
@@ -333,6 +315,11 @@
 96C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\get-port133417792901476542 1
 119C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\regions\DO.js133417792890673515 0
 110C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\lightningcss\README.md133417792903758572 0
+118C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\immutable\dist\immutable.es.js133417792902356973 0
+117C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\profiler\lib\types.js133417792866861846 0
+126C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\cjs\restructure\prepare\index.cjs133417792896594806 0
+140C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@swc\helpers\_\_tagged_template_literal\package.json133417792883031656 0
+96C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\htmlnano133417792902196980 1
 111C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\semver\functions\gte.js133417792908159450 0
 122C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\core\src\serializerCore.js133417792858337046 0
 99C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\htmlparser2133417792902316960 1
@@ -532,11 +519,7 @@
 103C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\.bin\semver.cmd133417792856216395 0
 146C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\node_modules\css-tree\cjs\definition-syntax\index.cjs133417792897115009 0
 96C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\readdirp133417792907159321 1
-<<<<<<< HEAD
-101C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.de158e3a.js.map133418402373266917 0
-=======
-101C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.de158e3a.js.map133418327511582161 0
->>>>>>> 2835d2c2c5948b0dc52d599e5dad230efa424ece
+101C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.de158e3a.js.map133418706666697957 0
 107C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\regenerator-runtime133417792907199256 1
 121C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\features\wav.js133417792889993363 0
 125C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\transformer-svg\src\inline.js133417792877748844 0
@@ -1300,9 +1283,9 @@
 132C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\node_modules\css-tree\lib\data-patch.js133417792898355500 0
 101C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\svgo\bin\svgo133417792908759850 0
 128C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\lmdb\dependencies\lmdb-data-v1\libraries133417792475433964 1
+113C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\supports-color\browser.js133417792908719869 0
 126C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\scss-reset\src\scss\_reset-mixins.scss133417792907919666 0
 133C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\features\form-validation.js133417792888112899 0
-113C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\supports-color\browser.js133417792908719869 0
 106C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\node-releases\data133417792477434730 1
 151C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\core\test\fixtures\invalid-source-not-file\src\index.js133417792858617081 0
 161C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\moveGroupAttrsToElems.js133417792866061629 0
@@ -1540,7 +1523,6 @@
 109C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\mdn-data\api\index.js133417792905318784 0
 124C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\css-what\lib\commonjs\types.d.ts.map133417792896274763 0
 108C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\scss-reset\README.md133417792907839427 0
-117C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\scss-reset\_reset-mixins.scss133417792907839427 0
 101C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\escalade\sync133417792901396551 1
 114C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\scss-reset\test\index.html133417792908039431 0
 119C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\regions\MQ.js133417792891313581 0
@@ -1586,8 +1568,6 @@
 125C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\scss-reset\src\styles\total-reset.css133417792907999430 0
 123C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@swc\helpers\cjs\_object_spread.cjs133417792883591735 0
 124C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\scss-reset\src\scss\total-reset.scss133417792907959427 0
-120C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\core\test\Parcel.test.js133417792858377226 0
-108C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\packager-raw133417792866781844 1
 136C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\lmdb\node_modules\msgpackr\dist\index.min.js.map133417792904838777 0
 110C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\color-convert\index.js133417792892473842 0
 119C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\scss-reset\src\scss\_reset.scss133417792907919666 0
@@ -2852,11 +2832,7 @@
 125C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\dom-serializer\lib\esm\index.d.ts.map133417792899916202 0
 129C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\features\css-lch-lab.js133417792886792658 0
 144C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\dom-serializer\node_modules\entities\lib\encode.d.ts.map133417792900036195 0
-<<<<<<< HEAD
-102C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.3f997115.css.map133418385037151054 0
-=======
-102C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.3f997115.css.map133418325696736445 0
->>>>>>> 2835d2c2c5948b0dc52d599e5dad230efa424ece
+102C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.3f997115.css.map133418695576988573 0
 100C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\css-tree\cjs133417792895274544 1
 139C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\dom-serializer\node_modules\entities\lib\index.d.ts133417792900036195 0
 124C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@swc\helpers\esm\_new_arrow_check.js133417792884191963 0
@@ -3053,7 +3029,6 @@
 133C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\node_modules\css-tree\lib\lexer\error.js133417792898475701 0
 127C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\node_modules\css-tree\dist\data.js133417792898315542 0
 145C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\node_modules\css-tree\lib\lexer\generic-an-plus-b.js133417792898475701 0
-141C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\node_modules\css-tree\lib\lexer\generic-const.js133417792898515509 0
 137C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\package-manager\src\promiseFromProcess.js133417792866421588 0
 142C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\node_modules\css-tree\lib\lexer\generic-urange.js133417792898515509 0
 135C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\csso\node_modules\css-tree\lib\lexer\generic.js133417792898515509 0
@@ -4342,11 +4317,7 @@
 126C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\features\download.js133417792887752899 0
 133C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\features\element-closest.js133417792887752899 0
 136C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\features\element-from-point.js133417792887792914 0
-<<<<<<< HEAD
-98C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.3f997115.css133418385037151054 0
-=======
-98C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.3f997115.css133418325696706494 0
->>>>>>> 2835d2c2c5948b0dc52d599e5dad230efa424ece
+98C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.3f997115.css133418695576958578 0
 121C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\features\eme.js133417792887792914 0
 121C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\caniuse-lite\data\features\eot.js133417792887792914 0
 101C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\types133417792877828849 1
@@ -4905,6 +4876,8 @@
 111C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\optimizer-image133417792864421127 1
 109C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\optimizer-swc133417792866261603 1
 109C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\packager-html133417792866621686 1
+120C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\core\test\Parcel.test.js133417792858377226 0
+108C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\packager-raw133417792866781844 1
 108C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\packager-svg133417792866821844 1
 104C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\profiler133417792866901863 1
 115C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\node_modules\@parcel\reporter-dev-server133417792867181859 1
@@ -6091,16 +6064,8 @@
 98C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.4b4a3002.css133417741014253049 0
 102C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.4b4a3002.css.map133417741014263055 0
 97C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.4d6bcbeb.js133417741014263055 0
-<<<<<<< HEAD
-97C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.de158e3a.js133418402373266917 0
+97C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.de158e3a.js133418706666687996 0
 97C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.fc1f1223.js133417741014283042 0
-90C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.html133418385037111084 0
-143C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\rest-countries-api-with-color-theme-switcher-master.3464ddca.js133418385037111084 0
-147C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\rest-countries-api-with-color-theme-switcher-master.3464ddca.js.map133418385037151054 0
-=======
-97C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.de158e3a.js133418327511562154 0
-97C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.fc1f1223.js133417741014283042 0
-90C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.html133418325696636431 0
-143C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\rest-countries-api-with-color-theme-switcher-master.3464ddca.js133418325696636431 0
-147C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\rest-countries-api-with-color-theme-switcher-master.3464ddca.js.map133418325696696437 0
->>>>>>> 2835d2c2c5948b0dc52d599e5dad230efa424ece
+90C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\index.html133418695576908576 0
+143C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\rest-countries-api-with-color-theme-switcher-master.3464ddca.js133418695576908576 0
+147C:\Users\jdcuk\Desktop\rest-countries-api-with-color-theme-switcher-master\dist\rest-countries-api-with-color-theme-switcher-master.3464ddca.js.map133418695576988573 0

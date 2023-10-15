@@ -228,6 +228,22 @@ const countryDetail = async (e)=>{
     history.pushState(null, null, `/country/${countryName}`);
     singleCountryStructure(currentCountry.images.png, currentCountry.isoCode, currentCountry.commonName, Object.values(currentCountry.nativeName).length > 2 ? Object.values(currentCountry.nativeName)[2].common : Object.values(currentCountry.nativeName)[0].common, currentCountry.population, currentCountry.region, currentCountry.subregion, currentCountry.capital, currentCountry.topLevelDomain, Object.values(currentCountry.currencies)[0].name, Object.values(currentCountry.languages).join(", "), currentCountry.borders);
 };
+window.addEventListener("popstate", ()=>{
+    if (window.location.href.endsWith("/")) {
+        utilitiesContainer.classList.remove("no-display");
+        countriesContainer.innerHTML = "";
+        countries.forEach((country)=>{
+            addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
+        });
+    } else {
+        countriesContainer.innerHTML = "";
+        const currentURL = window.location.pathname.split("/");
+        const currentCountryName = decodeURIComponent(currentURL[currentURL.length - 1]);
+        const currentCountry = countries.find((country)=>country.commonName === currentCountryName);
+        utilitiesContainer.classList.add("no-display");
+        singleCountryStructure(currentCountry.images.png, currentCountry.isoCode, currentCountry.commonName, Object.values(currentCountry.nativeName).length > 2 ? Object.values(currentCountry.nativeName)[2].common : Object.values(currentCountry.nativeName)[0].common, currentCountry.population, currentCountry.region, currentCountry.subregion, currentCountry.capital, currentCountry.topLevelDomain, Object.values(currentCountry.currencies)[0].name, Object.values(currentCountry.languages).join(", "), currentCountry.borders);
+    }
+});
 fetchCountries();
 
 //# sourceMappingURL=index.de158e3a.js.map
