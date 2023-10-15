@@ -1,5 +1,7 @@
 //section id=top
 const topSection = document.querySelector("#top");
+//dark theme button
+const darkThemeBtn = document.querySelector(".dark-mode-btn");
 //dropdown menu
 const selectContinent = document.querySelector(".dropdown-menu");
 const dropdownList = document.querySelector(".dropdown-list");
@@ -9,7 +11,7 @@ const countriesContainer = document.querySelector(".countries-container");
 //searchbar
 const searchbar = document.querySelector(".search-bar");
 //utilities container to delete
-const utilitiesContainer = document.querySelector(".utilities__container");
+const utilitiesContainer = document.querySelector("#utilities__container");
 // countries variable, storing fetched data
 let countries;
 //url api changers for filtering
@@ -52,6 +54,11 @@ const fetchCountries = async ()=>{
         }
     }).catch((err)=>console.log(err));
 };
+//handle dark theme
+const handleDarkThemeBtn = ()=>{
+    document.body.classList.toggle("dark-theme");
+};
+darkThemeBtn.addEventListener("click", handleDarkThemeBtn);
 //country div
 const addCountryStructure = (src, alt, name, population, region, capital)=>{
     const newLink = document.createElement("a");

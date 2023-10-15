@@ -5,12 +5,19 @@
 
 body {
     font-family: 'Nunito Sans', sans-serif;
+    
+    main {
+        max-width: 100%;
+        min-height: 100vh;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
 
     #top {
-        background-color: $very-light-gray;
+        background-color: var(--bg-color);
 
         header {
-            background-color: $white;
+            background-color: var(--bg-seconday-color);
             padding: 30px 0;
             -webkit-box-shadow: 0px -1px 2px 0px rgba(66, 68, 90, 1);
             -moz-box-shadow: 0px -1px 2px 0px rgba(66, 68, 90, 1);
@@ -19,11 +26,6 @@ body {
     }
 }
 
-main {
-    max-width: 100%;
-    min-height: 100vh;
-    background-color: $very-light-gray;
-}
 
 .container {
     max-width: 1440px;
@@ -48,6 +50,7 @@ main {
     align-items: center;
     gap: 0.5em;
     font-weight: 600;
+    color: var(--text-color);
 
     &::before {
         content: '\f186';
@@ -56,6 +59,10 @@ main {
         display: block;
         transform: rotate(-20deg);
     }
+}
+
+#utilities__container {
+    background-color: var(--bg-color);
 }
 
 .utilities {
@@ -82,6 +89,12 @@ main {
             font-size: 14px;
             border: none;
             border-radius: 0.5em;
+            background-color: var(--bg-seconday-color);
+            color: var(--text-secondary-color);
+
+            &::placeholder {
+                color: var(--text-secondary-color);
+            }
         }
     
         &::before {
@@ -90,7 +103,7 @@ main {
             font-weight: 600;
             position: absolute;
             margin-left: 20px;
-            color: $dark-gray;
+            color: var(--text-secondary-color);
         }
     }
 }
@@ -102,7 +115,6 @@ main {
     flex-basis: 200px;
 
     .dropdown-menu {
-        background-color: $white;
         padding: 1.2em 1.5em;
         width: 100%;
         display: flex;
@@ -110,6 +122,8 @@ main {
         align-items: center;
         border-radius: 0.5em;
         font-size: 14px;
+        background-color: var(--bg-seconday-color);
+        color: var(--text-color);
 
         &::after {
             content: '\f078';
@@ -122,7 +136,7 @@ main {
     }
 
     ul {
-        background-color: $white;
+        background-color: var(--bg-seconday-color);
         padding: 1.2em;
         display: none;
         position: absolute;
@@ -149,7 +163,7 @@ strong {
 }
 
 #content-section {
-    background-color: $very-light-gray;
+    background-color: var(--bg-color);
     min-height: calc(100vh - 153px);
 }
 
@@ -163,7 +177,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $very-light-gray;
     padding-top: 1.5em;
 
     @include tablet() {
@@ -191,7 +204,8 @@ a {
 
         .content {
             padding: 0 1.5em;
-            background-color: $white;
+            background-color: var(--bg-seconday-color);
+            color: var(--text-color);
 
             h2 {
                 font-weight: 800;
@@ -224,6 +238,8 @@ a {
         padding: 0.5em 1.5em;
         margin-bottom: 2.5em;
         font-weight: 600;
+        background-color: var(--bg-seconday-color);
+        color: var(--text-color);
 
         &::before {
             content: '\f060';
@@ -243,7 +259,7 @@ a {
         }
 
         @include desktop() {
-            width: 700px;
+            width: 700px !important;
             height: 400px;
         }
     }
@@ -297,5 +313,7 @@ a {
         padding: 0.4em 0;
         width: 6em;
         box-shadow: 0 0 2px rgba($dark-gray, 1);
+        background-color: var(--bg-seconday-color);
+        color: var(--text-color);
     }
 }

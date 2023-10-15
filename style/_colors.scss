@@ -4,3 +4,18 @@ $very-dark-blue-text: hsl(200, 15%, 8%);
 $dark-gray: hsl(0, 0%, 52%);
 $very-light-gray: hsl(0, 0%, 96%);
 $white: hsl(0, 0%, 100%);
+
+:root {
+    --text-color: hsl(200, 15%, 8%);
+    --text-secondary-color: hsl(0, 0%, 52%);
+    --bg-color: hsl(0, 0%, 96%);
+    --bg-seconday-color: hsl(0, 0%, 100%);
+}
+
+.dark-theme {
+    transition: 0.2s;
+    --text-color: hsl(0, 0%, 100%);
+    --text-secondary-color: hsl(0, 0%, 100%);
+    --bg-color: hsl(200, 15%, 8%);
+    --bg-seconday-color: hsl(207, 26%, 17%);
+}
