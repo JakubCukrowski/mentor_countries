@@ -572,7 +572,7 @@ a {
 }
 
 .single-country-wrapper img {
-  width: 320px;
+  width: auto;
   height: 220px;
 }
 
@@ -623,6 +623,11 @@ a {
 
 .no-display {
   display: none;
+}
+
+.border-country-btn {
+  padding: .5em 1em;
+  box-shadow: 0 0 2px #858585;
 }
 
 /*# sourceMappingURL=index.3f997115.css.map */

@@ -234,7 +234,7 @@ a {
     }
 
     img {
-        width: 320px;
+        width: auto;
         height: 220px;
 
         @include tablet() {
@@ -285,4 +285,9 @@ a {
 
 .no-display {
     display: none;
+}
+
+.border-country-btn {
+    padding: 0.5em 1em;
+    box-shadow: 0 0 2px rgba($dark-gray, 1);
 }

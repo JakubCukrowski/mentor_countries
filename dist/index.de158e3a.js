@@ -38,7 +38,8 @@ const fetchCountries = async ()=>{
                 capital: country.capital,
                 topLevelDomain: country.tld,
                 currencies: country.currencies,
-                borders: country.borders || null
+                borders: country.borders || null,
+                cca3: country.cca3
             };
         });
         if (window.location.pathname === "/") countries.forEach((country)=>{
@@ -192,14 +193,18 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
     if (borderCountries) {
         const borderButtonsContainer = document.createElement("div");
         borderButtonsContainer.classList.add("border-buttons-container");
+        const borderButtonsWrapper = document.createElement("div");
+        borderButtonsWrapper.classList.add("border-buttons-wrapper");
         borderButtonsContainer.innerHTML = `<p><strong>Border Counties: </strong></p>`;
         for(let i = 0; i < borderCountries.length; i++){
             const borderCountryButton = document.createElement("button");
             borderCountryButton.classList.add("border-country-btn");
+            const filterBorderCountries = countries.find((country)=>country.cca3 === borderCountries[i]);
             borderCountryButton.id = borderCountries[i];
-            borderCountryButton.innerText = borderCountries[i];
-            borderButtonsContainer.append(borderCountryButton);
+            borderCountryButton.innerText = filterBorderCountries.commonName;
+            borderButtonsWrapper.append(borderCountryButton);
         }
+        borderButtonsContainer.append(borderButtonsWrapper);
         countryInfoWrapper.append(borderButtonsContainer);
     }
 };
