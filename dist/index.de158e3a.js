@@ -98,13 +98,11 @@ const handleSearchbar = (e)=>{
     endpoint = e.target.value;
     if (endpoint.length > 0) {
         if (region !== undefined) {
-<<<<<<< HEAD
             const countryFilteredByRegion = countriesByRegion.filter((country)=>country.commonName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(endpoint.toLowerCase()));
-=======
-            const countryFilteredByRegion = countriesByRegion.find((country)=>country.commonName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(endpoint.toLowerCase()));
->>>>>>> 2835d2c2c5948b0dc52d599e5dad230efa424ece
             countriesContainer.innerHTML = "";
-            addCountryStructure(countryFilteredByRegion.images.png, countryFilteredByRegion.isoCode, countryFilteredByRegion.commonName, countryFilteredByRegion.population, countryFilteredByRegion.region, countryFilteredByRegion.capital);
+            countryFilteredByRegion.forEach((country)=>{
+                addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
+            });
         } else {
             const filteredCountry = countries.filter((country)=>country.commonName.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(endpoint.toLowerCase()));
             countriesContainer.innerHTML = "";
