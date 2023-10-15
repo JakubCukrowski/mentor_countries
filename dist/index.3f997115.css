@@ -617,6 +617,7 @@ a {
   .single-country-wrapper .country-data-wrapper {
     justify-content: space-between;
     align-items: center;
+    gap: 4em;
     display: flex;
   }
 }
@@ -625,7 +626,13 @@ a {
   display: none;
 }
 
-.border-country-btn {
+.border-buttons-wrapper {
+  flex-wrap: wrap;
+  gap: .5em;
+  display: flex;
+}
+
+.border-buttons-wrapper .border-country-btn {
   width: 6em;
   padding: .4em 0;
   box-shadow: 0 0 2px #858585;

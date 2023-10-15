@@ -135,7 +135,7 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
         countriesContainer.innerHTML = "";
         utilitiesContainer.classList.remove("no-display");
         searchbar.value = "";
-        history.back();
+        history.pushState(null, null, `/`);
         if (region !== undefined) countriesByRegion.forEach((country)=>{
             addCountryStructure(country.images.png, country.isoCode, country.commonName, country.population, country.region, country.capital);
         });
@@ -199,6 +199,7 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
         for(let i = 0; i < borderCountries.length; i++){
             const borderCountryButton = document.createElement("button");
             borderCountryButton.classList.add("border-country-btn");
+            borderCountryButton.addEventListener("click", handleBorderButtons);
             const filterBorderCountries = countries.find((country)=>country.cca3 === borderCountries[i]);
             borderCountryButton.id = borderCountries[i];
             borderCountryButton.innerText = filterBorderCountries.commonName;
@@ -207,6 +208,15 @@ const singleCountryStructure = (src, alt, singleCountryName, nativeName, populat
         borderButtonsContainer.append(borderButtonsWrapper);
         countryInfoWrapper.append(borderButtonsContainer);
     }
+};
+//handle border countries buttons
+const handleBorderButtons = (e)=>{
+    const borderCountry = countries.find((country)=>{
+        return country.cca3 === e.target.id;
+    });
+    countriesContainer.innerHTML = "";
+    singleCountryStructure(borderCountry.images.png, borderCountry.isoCode, borderCountry.commonName, Object.values(borderCountry.nativeName).length > 2 ? Object.values(borderCountry.nativeName)[2].common : Object.values(borderCountry.nativeName)[0].common, borderCountry.population, borderCountry.region, borderCountry.subregion, borderCountry.capital, borderCountry.topLevelDomain, Object.values(borderCountry.currencies)[0].name, Object.values(borderCountry.languages).join(", "), borderCountry.borders);
+    history.pushState(null, null, `/country/${borderCountry.commonName}`);
 };
 // country details page
 const countryDetail = async (e)=>{
