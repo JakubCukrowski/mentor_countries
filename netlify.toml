@@ -1,4 +1,4 @@
 [[redirects]]
-from = '/'
-to = '/country/*'
+from = "/*"
+to = "/index.html"
 status = 200
